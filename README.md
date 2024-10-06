@@ -65,25 +65,25 @@ For detailed API documentation, visit `http://localhost:8084/docs` after startin
   - `config/`: Configuration files
    - `config.py`
   - `models/`: Defines data models for database tables
-   - `pago_model.py`
-   - `arrendatario_model.py`
+   - `pay.py`
+   - `tenant.py`
   - `repositories/`: Implements data access logic
-   - `pago_repository.py`
-   - `arrendatario_repository.py`
+   - `pay_repository.py`
+   - `tenant_repository.py`
   - `routes/`: Defines the API endpoints
-   - `pago_routes.py`
-   - `arrendatario_routes.py`
+   - `pay_routes.py`
+   - `tenant_routes.py`
   - `schemas/`: Defines the input and output schemas for the API
-   - `pago_schema.py`
-   - `arrendatario_schema.py`
+   - `pay_schema.py`
+   - `tenant_schema.py`
   - `services/`: Contains the business logic
-   - `pago_service.py`
-   - `arrendatario_service.py` 
+   - `pay_service.py`
+   - `tenant_service.py` 
   - `main-py`: Application entry point
 
 - `test/`: Contains the unit tests.
-  - `test_pago_service.py`
-  - `test_arrendatario_service.py`
+  - `test_pay.py`
+  - `test_tenant.py`
 
 ## Contribution
 Please make corrections in this section

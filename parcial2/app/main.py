@@ -7,8 +7,8 @@ app = FastAPI()
 Base.metadata.create_all(bind=engine)
 
 app.include_router(pay_routes.router, prefix="/api", tags=["pago"])
-app.include_router(tenant_routes.router,prefix="/api", tags=["arrendatario"])
+app.include_router(tenant_routes.router, prefix="/api", tags=["arrendatario"])
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8084)
+    uvicorn.run(app, host="127.0.0.1", port=8084)

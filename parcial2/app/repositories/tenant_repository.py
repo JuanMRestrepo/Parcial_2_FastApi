@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 from app.models.tenant import TenantORM
 from app.schemas.tenant_schema import TenantRequest
 
+
 def create_tenant(db: Session, tenant: TenantRequest):
     """
     creates a new tenant
@@ -16,6 +17,7 @@ def create_tenant(db: Session, tenant: TenantRequest):
     db.refresh(db_tenant)
     return db_tenant
 
+
 def get_all_tenats(db: Session):
     """
     obtains all tenants
@@ -23,6 +25,7 @@ def get_all_tenats(db: Session):
     :return: all tenants in DB
     """
     return db.query(TenantORM).all()
+
 
 def get_tenant_by_id(db: Session, id: str):
     """

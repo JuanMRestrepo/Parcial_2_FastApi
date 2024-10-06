@@ -1,6 +1,7 @@
 from sqlalchemy import Column, String
 from app.config.config import Base
 
+
 class TenantORM(Base):
     """
     create model for db table

@@ -82,8 +82,11 @@ For detailed API documentation, visit `http://localhost:8084/docs` after startin
   - `main-py`: Application entry point
 
 - `test/`: Contains the unit tests.
-  - `test_pay.py`
-  - `test_tenant.py`
+  - `test_pay_routes.py`
+  - `test_tenant_routes.py`
+  - `test_pay_service.py`
+  - `test_tenant_service.py`
+
 
 ## Contribution
 Please make corrections in this section

@@ -1,13 +1,15 @@
 from pydantic import BaseModel, EmailStr
 
+
 class TenantRequest(BaseModel):
     """
     Model representing a new order request
     """
-    id : str
+    id: str
     fullName: str
-    email : EmailStr
+    email: EmailStr
     phone: str
+
 
 class TenantDTO(BaseModel):
     """

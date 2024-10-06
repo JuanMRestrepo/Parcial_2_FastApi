@@ -1,5 +1,8 @@
 from datetime import date
+from typing import Optional
+
 from pydantic import BaseModel, Field
+
 
 class PayRequest(BaseModel):
     """
@@ -10,24 +13,31 @@ class PayRequest(BaseModel):
     valuePaid: float = Field(..., gt=1, le=1000000)
     payDate: date
 
+
 class PayDTO(BaseModel):
     """
     Data Transfer Object (DTO) for representing order information.
     """
-    id : int
-    tenant_id: str
-    property_code: str
-    value_paid: float
-    pay_date: date
+    id: int
+    tenantId: str
+    propertyCode: str
+    valuePaid: float
+    payDate: date
+
+
+class PayResponse(BaseModel):
+    """
+    Data Transfer Object (DTO) for representing order information.
+    """
+    Response: str
+    id: Optional[int] = None
+    tenantId: Optional[str] = None
+    propertyCode: Optional[str] = None
+    valuePaid: Optional[float] = None
+    payDate: Optional[date] = None
 
     class Config:
         """
         Pydantic configuration to enable from_attributes mode.
         """
         from_attributes = True  # Cambia orm_mode a from_attributes
-
-class PayResponse(BaseModel):
-    """
-    Response for representing order value paid information.
-    """
-    Response: str

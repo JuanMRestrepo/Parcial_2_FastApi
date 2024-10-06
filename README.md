@@ -40,7 +40,7 @@ The objective of this project is to demonstrate the knowledge to date from the c
 
 4. Start the server:
    ```
-   uvicorn app.main:app --reload
+   uvicorn app.main:app --reload --port 8084
    ```
 
 5. Test Status:

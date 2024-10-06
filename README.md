@@ -63,15 +63,27 @@ For detailed API documentation, visit `http://localhost:8084/docs` after startin
 
 - `app/`: Main application package
   - `config/`: Configuration files
-  - `models/`: SQLAlchemy models
-  - `repositories/`: Database operation handlers
-  - `routes/`: API route definitions
-  - `schemas/`: Pydantic models for request/response handling
-  - `services/`: Contains the business logic.
+   - `config.py`
+  - `models/`: Defines data models for database tables
+   - `pago_model.py`
+   - `arrendatario_model.py`
+  - `repositories/`: Implements data access logic
+   - `pago_repository.py`
+   - `arrendatario_repository.py`
+  - `routes/`: Defines the API endpoints
+   - `pago_routes.py`
+   - `arrendatario_routes.py`
+  - `schemas/`: Defines the input and output schemas for the API
+   - `pago_schema.py`
+   - `arrendatario_schema.py`
+  - `services/`: Contains the business logic
+   - `pago_service.py`
+   - `arrendatario_service.py` 
+  - `main-py`: Application entry point
 
-- `test/`: Test application package
-  - `test`
-
+- `test/`: Contains the unit tests.
+  - `test_pago_service.py`
+  - `test_arrendatario_service.py`
 
 ## Contribution
 Please make corrections in this section
